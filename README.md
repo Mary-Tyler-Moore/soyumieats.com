@@ -3,4 +3,4 @@
 
 # Audit: 2-26-2020
 
-<img src="https://github.com/Mary-Tyler-Moore/soyumieats.com/blob/master/soyumi-before.png?raw=true" width="80%" />
+<img src="https://github.com/Mary-Tyler-Moore/soyumieats.com/blob/master/soyumi-before.png?raw=true" width="100%" />
