@@ -16,13 +16,13 @@
           round
           @click="leftDrawerOpen = !leftDrawerOpen"
           icon="menu"
+          size="xl"
           aria-label="Menu"
         />
 
-        <q-toolbar-title class="absolute-center text-h4"><img
-            src="statics/soyumilogo.png"
-            height="60px"
-          /></q-toolbar-title>
+        <q-toolbar-title class="absolute-center text-h4"
+          ><img src="statics/soyumilogo.png" height="60px"
+        /></q-toolbar-title>
         <!-- Dark Mode Toggle -->
         <q-btn
           :icon="$q.dark.isActive ? 'brightness_3' : 'wb_sunny'"
@@ -43,11 +43,12 @@
       bordered
       :content-class="$q.dark.isActive ? 'bg-grey-10' : 'bg-grey-2'"
     >
-      <q-list>
+      <q-list separator>
         <q-item-label
           header
           :style="$q.dark.isActive ? 'color: white' : 'color: black'"
-        >Navigation</q-item-label>
+          >Navigation</q-item-label
+        >
 
         <q-item
           :style="$q.dark.isActive ? 'color: white' : 'color: black'"
@@ -57,10 +58,14 @@
           active-class="my-menu-link"
         >
           <q-item-section avatar>
-            <q-icon name="home" />
+            <q-icon name="restaurant" size="lg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label :style="$q.dark.isActive ? 'color: white' : 'color: black'">Home</q-item-label>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >RESTAURANT</q-item-label
+            >
             <!--
             <q-item-label>{{ nav.label }}</q-item-label>
             -->
@@ -75,10 +80,14 @@
           active-class="my-menu-link"
         >
           <q-item-section avatar>
-            <q-icon name="mdi-dog" />
+            <q-icon name="menu_book" size="lg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label :style="$q.dark.isActive ? 'color: white' : 'color: black'">Puppy Rentals</q-item-label>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >MENU</q-item-label
+            >
           </q-item-section>
         </q-item>
 
@@ -90,10 +99,14 @@
           active-class="my-menu-link"
         >
           <q-item-section avatar>
-            <q-icon name="mdi-cat" />
+            <q-icon name="assignment_ind" size="lg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label :style="$q.dark.isActive ? 'color: white' : 'color: black'">Kitten Rentals</q-item-label>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >RESERVATIONS</q-item-label
+            >
           </q-item-section>
         </q-item>
 
@@ -105,10 +118,14 @@
           active-class="my-menu-link"
         >
           <q-item-section avatar>
-            <q-icon name="record_voice_over" />
+            <q-icon name="time_to_leave" size="lg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label :style="$q.dark.isActive ? 'color: white' : 'color: black'">Testimonials</q-item-label>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >DELIVERY</q-item-label
+            >
           </q-item-section>
         </q-item>
 
@@ -120,10 +137,52 @@
           active-class="my-menu-link"
         >
           <q-item-section avatar>
-            <q-icon name="mail_outline" />
+            <q-icon name="shopping_cart" size="lg" />
           </q-item-section>
           <q-item-section>
-            <q-item-label :style="$q.dark.isActive ? 'color: white' : 'color: black'">Contact</q-item-label>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >ORDER ONLINE</q-item-label
+            >
+          </q-item-section>
+        </q-item>
+
+        <q-item
+          :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+          exact
+          clickable
+          to="/"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="room_service" size="lg" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >CATERING</q-item-label
+            >
+          </q-item-section>
+        </q-item>
+
+        <q-item
+          :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+          exact
+          clickable
+          to="/"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="supervisor_account" size="lg" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label
+              style="font-size: 25px"
+              :style="$q.dark.isActive ? 'color: white' : 'color: black'"
+              >JOIN THE TEAM</q-item-label
+            >
           </q-item-section>
         </q-item>
       </q-list>
@@ -138,15 +197,10 @@
 <script>
 export default {
   name: "MyLayout",
-  data () {
+  data() {
     return {
       leftDrawerOpen: false
     };
   }
 };
 </script>
-<style lang="scss" scoped>
-.toolbar-gradient {
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-}
-</style>

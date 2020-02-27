@@ -22,9 +22,6 @@
           name="first"
           img-src="statics/recropped_01.jpg"
         >
-          <div class="absolute-center custom-caption">
-            <div class="text-h3">Menu Item</div>
-          </div>
         </q-carousel-slide>
         <q-carousel-slide
           name="second"

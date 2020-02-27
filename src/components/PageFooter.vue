@@ -7,29 +7,49 @@
       <q-btn
         round
         color="black"
-        icon="shopping_cart"
+        icon="mdi-instagram"
+        @click="instagramLink()"
       />
       <q-btn
         round
         color="black"
-        icon="navigation"
+        icon="mdi-facebook"
+        @click="facebookLink()"
       />
       <q-btn
         round
         color="black"
-        icon="layers_clear"
+        icon="mdi-twitter"
+        @click="twitterLink()"
       />
       <q-btn
         round
         color="black"
-        icon="directions"
+        icon="mdi-yelp"
+        @click="yelpLink()"
       />
     </div>
   </div>
 </template>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
-  name: "PageFooter"
+  name: "PageFooter",
+  methods: {
+    instagramLink () {
+      openURL('https://www.instagram.com/soyumieats/')
+    },
+    facebookLink () {
+      openURL('https://www.facebook.com/soyumieats/')
+    },
+    twitterLink () {
+      openURL('https://twitter.com/soyumieats')
+    },
+    yelpLink () {
+      openURL('https://www.yelp.com/biz/soyumi-asian-kitchen-statesboro')
+    }
+  }
 };
 </script>
