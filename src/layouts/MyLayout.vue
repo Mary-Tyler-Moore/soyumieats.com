@@ -6,8 +6,8 @@
         class="shadow-18"
         :style="
           $q.dark.isActive
-            ? 'background-image: linear-gradient(to right, #30cfd0 0%, #330867 75%)'
-            : 'background-image: linear-gradient(to right, #fa709a 25%, #fee140 100%)'
+            ? 'background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);'
+            : 'background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);'
         "
       >
         <q-btn
@@ -20,12 +20,12 @@
         />
 
         <q-toolbar-title class="absolute-center text-h4"><img
-            src="statics/sugar-mag-logo.png"
+            src="statics/soyumilogo.png"
             height="60px"
           /></q-toolbar-title>
         <!-- Dark Mode Toggle -->
         <q-btn
-          :icon="$q.dark.isActive ? 'wb_sunny' : 'brightness_3'"
+          :icon="$q.dark.isActive ? 'brightness_3' : 'wb_sunny'"
           flat
           class="absolute-right"
           style="margin-right: 2em"
